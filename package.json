@@ -1,0 +1,51 @@
+{
+  "name": "nextjs_wrid_official_website",
+  "version": "0.1.0",
+  "author": {
+    "name": "NaLuWan Chien",
+    "email": "street.baller06@gmail.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && touch ./out/.nojekyll",
+    "start": "npx serve@latest out",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out -t true"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "gh-pages": "^6.1.0",
+    "lucide-react": "^0.292.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sharp": "^0.32.6",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "autoprefixer": "latest",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "postcss": "latest",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
