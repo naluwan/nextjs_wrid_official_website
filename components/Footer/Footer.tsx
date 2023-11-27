@@ -24,7 +24,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className='mt-8 h-auto bg-[#fdfdfd] p-4 text-center'>
+    <footer className='3xl:px-0 mx-auto mt-8 h-auto max-w-[1440px] px-6 py-4 lg:px-20'>
       <div className='flex justify-evenly max-md:flex-col max-md:items-center'>
         <Image
           src={footerIcon}
