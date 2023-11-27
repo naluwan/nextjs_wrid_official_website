@@ -2,7 +2,7 @@ import Image from 'next/image';
 import fbIcon from '@/public/fbIcon.png';
 import igIcon from '@/public/igIcon.png';
 import lineIcon from '@/public/lineIcon.png';
-import footerIcon from '@/public/footerLogo.png';
+import footerIcon from '@/public/logo.png';
 import { cn } from '@/lib/utils';
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className='mt-8 h-auto bg-gray-200 p-4 text-center'>
+    <footer className='mt-8 h-auto bg-[#fdfdfd] p-4 text-center'>
       <div className='flex justify-evenly max-md:flex-col max-md:items-center'>
         <Image
           src={footerIcon}
@@ -40,7 +40,7 @@ const Footer = () => {
             <p>整新、裝潢、設計等任何問題</p>
             <p>可透過Line或E-mail，我們將盡快回覆</p>
             <p>聯絡電話：0900-427-410</p>
-            <p>官方Line：@565osqjq</p>
+            <p>官方Line：evannn219</p>
             <p>E-mail：wurealm.design@gmail.com</p>
             <div className='flex items-center justify-center gap-x-2 md:justify-start'>
               {socialMediaData.map((item) => (
