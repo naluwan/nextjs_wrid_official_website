@@ -1,12 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-import logo from '@/public/logo.png';
 
 const Home = () => {
   useEffect(() => {
@@ -16,27 +13,6 @@ const Home = () => {
 
   return (
     <div className='bg-mi-bai h-full'>
-      <header className='flex items-end justify-between p-4'>
-        {/* 公司Logo */}
-        <div className='flex items-center'>
-          <Image src={logo} alt='logo' width={75} height={75} />
-        </div>
-
-        {/* 導航菜單 */}
-        <nav className='mt-4'>
-          <ul className='flex space-x-4'>
-            <li>
-              <Link href='/portfolio'>作品集</Link>
-            </li>
-            <li>
-              <Link href='/about'>關於我們</Link>
-            </li>
-            <li>
-              <Link href='/contact'>聯繫我們</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
       <main className='p-8'>
         {/* 引導語 */}

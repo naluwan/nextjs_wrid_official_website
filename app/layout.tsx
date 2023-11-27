@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import './globals.css';
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
 // import { Inter } from 'next/font/google';
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -15,7 +16,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='zh-tw'>
       <body className='hide-scrollbar h-auto'>
-        <main className='h-full'>{children}</main>
+        <Navbar />
+        <main className='h-full mx-auto max-w-[1440px]'>{children}</main>
         <Footer />
       </body>
     </html>
