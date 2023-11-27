@@ -5,7 +5,7 @@ import Logo from './_components/logo';
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-end relative bg-transparent p-4 mx-auto max-w-[1440px]'>
+    <nav className='relative mx-auto flex max-w-[1440px] items-end justify-between bg-transparent p-4'>
       <Link className='flex' href='/'>
         <Logo />
       </Link>

@@ -17,7 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang='zh-tw'>
       <body className='hide-scrollbar h-auto'>
         <Navbar />
-        <main className='h-full mx-auto max-w-[1440px]'>{children}</main>
+        <main className='mx-auto h-full min-h-[910px] max-w-[1440px]'>{children}</main>
         <Footer />
       </body>
     </html>
