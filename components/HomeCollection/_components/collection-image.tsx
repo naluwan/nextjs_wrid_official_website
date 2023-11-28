@@ -23,21 +23,15 @@ const CollectionImage = ({ img, name }: CollectionImageProps) => {
           <div className='flex w-full items-center pt-2'>
             <button
               onClick={() => {}}
-              className='relative h-4 w-4 rounded-full bg-orange-300 p-4 duration-500 hover:bg-orange-500/80 hover:dark:bg-orange-500/80'
+              className='relative h-4 w-4 rounded-full bg-[#fdfdfd] p-4 duration-500 hover:bg-[#fdfdfd]/80'
             >
-              <Search
-                className='absolute left-2 top-2 h-4 w-4 text-white'
-                strokeWidth={4}
-              />
+              <Search className='absolute left-2 top-2 h-4 w-4' strokeWidth={4} />
             </button>
             <button
               onClick={() => {}}
-              className='relative ml-5 h-4 w-4 rounded-full bg-orange-300 p-4 duration-500 hover:bg-orange-500/80 hover:dark:bg-orange-500/80'
+              className='relative ml-5 h-4 w-4 rounded-full bg-[#fdfdfd] p-4 duration-500 hover:bg-[#fdfdfd]/80'
             >
-              <Link
-                className='absolute left-2 top-2 h-4 w-4 text-white'
-                strokeWidth={4}
-              />
+              <Link className='absolute left-2 top-2 h-4 w-4' strokeWidth={4} />
             </button>
           </div>
         </div>
