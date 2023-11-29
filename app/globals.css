@@ -117,3 +117,8 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.swiper-pagination {
+  color: #fdfdfd !important;
+  font-weight: bolder !important;
+}
