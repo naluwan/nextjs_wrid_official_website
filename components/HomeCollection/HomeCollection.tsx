@@ -1,13 +1,22 @@
 import { CollectionType, collectionsData } from '@/public/constants';
 import CollectionImage from './_components/collection-image';
 import React from 'react';
+import Modal from '../Modal';
+import Slides from '../Sildes';
 
 const HomeCollection = () => {
-  const [collections, setCollections] = React.useState<CollectionType[] | []>([]);
+  const [collections] = React.useState<CollectionType[] | []>(
+    collectionsData.slice(0, 7),
+  );
 
-  React.useEffect(() => {
-    setCollections(collectionsData);
-  }, []);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [selectedCollection, setSelectedCollection] =
+    React.useState<CollectionType | null>(null);
+
+  const clickImage = (collection: CollectionType) => {
+    setIsModalOpen(true);
+    setSelectedCollection(collection);
+  };
 
   return (
     <section className='mt-8'>
@@ -26,16 +35,14 @@ const HomeCollection = () => {
         data-aos-delay='600'
         data-aos-once
       >
-        {collections
-          .filter(
-            (item) =>
-              item.id === 'collection1' ||
-              item.id === 'collection2' ||
-              item.id === 'collection3',
-          )
-          .map((item) => (
-            <CollectionImage img={item.images[0].img} name={item.label} key={item.id} />
-          ))}
+        {collections.slice(0, 3).map((item) => (
+          <CollectionImage
+            img={item.images[0].img}
+            name={item.label}
+            key={item.id}
+            onClick={() => clickImage(item)}
+          />
+        ))}
       </div>
 
       <div
@@ -44,17 +51,28 @@ const HomeCollection = () => {
         data-aos-delay='1000'
         data-aos-once
       >
-        {collections
-          .filter(
-            (item) =>
-              item.id === 'collection4' ||
-              item.id === 'collection5' ||
-              item.id === 'collection6',
-          )
-          .map((item) => (
-            <CollectionImage img={item.images[0].img} name={item.label} key={item.id} />
-          ))}
+        {collections.slice(4, 7).map((item) => (
+          <CollectionImage
+            img={item.images[0].img}
+            name={item.label}
+            key={item.id}
+            onClick={() => clickImage(item)}
+          />
+        ))}
       </div>
+
+      <Modal
+        open={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+        }}
+      >
+        <Slides
+          collection={selectedCollection as CollectionType}
+          autoPlay={false}
+          key={selectedCollection?.id}
+        />
+      </Modal>
     </section>
   );
 };

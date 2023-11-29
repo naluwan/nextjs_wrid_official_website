@@ -1,12 +1,13 @@
-import { Link, Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import Image, { StaticImageData } from 'next/image';
 
 interface CollectionImageProps {
   img: StaticImageData;
   name: string;
+  onClick: () => void;
 }
 
-const CollectionImage = ({ img, name }: CollectionImageProps) => {
+const CollectionImage = ({ img, name, onClick }: CollectionImageProps) => {
   return (
     <div className='group relative overflow-hidden rounded-lg bg-white shadow-md'>
       <Image
@@ -22,16 +23,10 @@ const CollectionImage = ({ img, name }: CollectionImageProps) => {
           <span className='text-2xl tracking-widest text-white'>{name}</span>
           <div className='flex w-full items-center pt-2'>
             <button
-              onClick={() => {}}
+              onClick={onClick}
               className='relative h-4 w-4 rounded-full bg-[#fdfdfd] p-4 duration-500 hover:bg-[#fdfdfd]/80'
             >
               <Search className='absolute left-2 top-2 h-4 w-4' strokeWidth={4} />
-            </button>
-            <button
-              onClick={() => {}}
-              className='relative ml-5 h-4 w-4 rounded-full bg-[#fdfdfd] p-4 duration-500 hover:bg-[#fdfdfd]/80'
-            >
-              <Link className='absolute left-2 top-2 h-4 w-4' strokeWidth={4} />
             </button>
           </div>
         </div>
