@@ -1,16 +1,15 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import React from 'react';
 import { collectionsData, CollectionType } from '@/public/constants';
 import Modal from '@/components/Modal';
 import Slides from '@/components/Sildes/Slides';
 
 const PortfolioPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedCollection, setSelectedCollection] = useState<CollectionType | null>(
-    null,
-  );
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = React.useState('all');
+  const [selectedCollection, setSelectedCollection] =
+    React.useState<CollectionType | null>(null);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const filteredCollections =
     selectedCategory === 'all'
@@ -39,6 +38,7 @@ const PortfolioPage: React.FC = () => {
             key={category}
             onClick={() => {
               setSelectedCategory(category);
+              setSelectedCollection(null);
             }}
             className={`mr-4 rounded px-4 py-2 ${
               selectedCategory === category
@@ -88,9 +88,11 @@ const PortfolioPage: React.FC = () => {
         open={isModalOpen}
         onClose={() => {
           setIsModalOpen(false);
-          setSelectedCollection(null);
         }}
       >
+        <h1 className='text-center text-3xl tracking-widest'>
+          {selectedCollection?.label}
+        </h1>
         <Slides
           collection={selectedCollection as CollectionType}
           autoPlay={false}
