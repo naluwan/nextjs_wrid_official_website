@@ -24,6 +24,7 @@
     "react": "latest",
     "react-dom": "latest",
     "sharp": "^0.32.6",
+    "swiper": "^11.0.5",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7"
   },
