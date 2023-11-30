@@ -2,8 +2,11 @@
 import Image from 'next/image';
 import React from 'react';
 import { collectionsData, CollectionType } from '@/public/constants';
-import Modal from '@/components/Modal';
+// import Modal from '@/components/Modal';
 import Slides from '@/components/Sildes/Slides';
+import dynamic from 'next/dynamic';
+
+const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
@@ -84,8 +87,7 @@ const PortfolioPage: React.FC = () => {
             </div>
           ))}
       </div>
-
-      <Modal
+      <DynamicModal
         open={isModalOpen}
         onClose={() => {
           setIsModalOpen(false);
@@ -99,7 +101,7 @@ const PortfolioPage: React.FC = () => {
           autoPlay={false}
           key={selectedCollection?.id}
         />
-      </Modal>
+      </DynamicModal>
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { Navigation, Pagination, Autoplay, A11y, EffectFade } from 'swiper/modul
 import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
-
 import { CollectionType } from '@/public/constants';
 import SlideNext from './_components/slide-next';
 import SlidePrev from './_components/slide-prev';
@@ -48,8 +47,7 @@ const Slides: React.FC<SlidesProps> = (props) => {
               alt={image.name}
               width={300}
               height={200}
-              priority
-              className={cn('h-full w-full object-contain')}
+              className={cn('h-full max-h-[570px] w-full object-contain')}
             />
           </SwiperSlide>
         ))}
