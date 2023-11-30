@@ -5,11 +5,6 @@ import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-
 import { CollectionType } from '@/public/constants';
 import SlideNext from './_components/slide-next';
 import SlidePrev from './_components/slide-prev';
@@ -51,7 +46,10 @@ const Slides: React.FC<SlidesProps> = (props) => {
             <Image
               src={image.img}
               alt={image.name}
-              className={cn('h-full max-h-[570px] w-full object-contain')}
+              width={300}
+              height={200}
+              priority
+              className={cn('h-full w-full object-contain')}
             />
           </SwiperSlide>
         ))}

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/effect-fade';
+
 @font-face {
   font-family: 'KuMincho';
   src: url('/nextjs_wrid_official_website/fonts/KuMincho-R_beta.otf') format('opentype');
