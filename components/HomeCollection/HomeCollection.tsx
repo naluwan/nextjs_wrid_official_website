@@ -1,8 +1,10 @@
 import { CollectionType, collectionsData } from '@/public/constants';
 import CollectionImage from './_components/collection-image';
 import React from 'react';
-import Modal from '../Modal';
 import Slides from '../Sildes';
+import dynamic from 'next/dynamic';
+
+const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const HomeCollection = () => {
   const [collections] = React.useState<CollectionType[] | []>(
@@ -61,7 +63,7 @@ const HomeCollection = () => {
         ))}
       </div>
 
-      <Modal
+      <DynamicModal
         open={isModalOpen}
         onClose={() => {
           setIsModalOpen(false);
@@ -72,7 +74,7 @@ const HomeCollection = () => {
           autoPlay={false}
           key={selectedCollection?.id}
         />
-      </Modal>
+      </DynamicModal>
     </section>
   );
 };
