@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { collectionsData, CollectionType } from '@/public/constants';
-// import Modal from '@/components/Modal';
 import Slides from '@/components/Sildes/Slides';
 import dynamic from 'next/dynamic';
 

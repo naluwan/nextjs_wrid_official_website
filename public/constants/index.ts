@@ -232,3 +232,11 @@ export const collectionsData = [
   //   ],
   // },
 ];
+
+export const ceoExp = [
+  { title: 2023, cardTitle: '任職 吾境設計 設計執行總監' },
+  { title: 2022, cardTitle: '任職 新境創作設計 設計部主管' },
+  { title: 2019, cardTitle: '任職 浩室設計 設計部主管' },
+  { title: 2017, cardTitle: '任職 帷圓設計 設計師' },
+  { title: 2015, cardTitle: '任職 萊得爾室內設計 設計師' },
+];
