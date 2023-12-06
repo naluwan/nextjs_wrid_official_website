@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import AOS from 'aos';
-import ceoImage from '@/public/CEO-removebg.png';
+import ceoImage from '@/public/CEO.png';
 import { ceoExp } from '@/public/constants';
 
 const AboutUs: React.FC = () => {
@@ -12,7 +12,12 @@ const AboutUs: React.FC = () => {
 
   return (
     <div className='mx-auto p-4 sm:p-16'>
-      <div data-aos='fade-up' data-aos-duration='1000' className='text-center'>
+      <div
+        className='text-center'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-once
+      >
         {/* 文字介紹 */}
         <h1 className='mb-4 text-xl font-bold md:text-3xl'>
           住宅設計 ｜客變規劃 ｜ 商業空間
@@ -27,9 +32,10 @@ const AboutUs: React.FC = () => {
         data-aos='fade-up'
         data-aos-duration='1000'
         data-aos-delay='400'
+        data-aos-once
       >
         <div className='flex flex-col items-center text-[#fdfdfd] max-md:mb-8'>
-          <div className='aspect-square max-h-[500px] max-w-[500px] p-6 md:p-0'>
+          <div className='aspect-square max-h-[500px] max-w-[500px] overflow-hidden rounded-md p-6 md:p-0'>
             {/* 照片 */}
             <Image
               src={ceoImage}
@@ -40,7 +46,7 @@ const AboutUs: React.FC = () => {
               className='h-auto w-auto'
             />
           </div>
-          <p className='mb-2'>吾境設計總監 - 陳映志</p>
+          <p className='mt-2'>吾境設計總監 - 陳映志</p>
         </div>
 
         <div>
@@ -56,6 +62,7 @@ const AboutUs: React.FC = () => {
                   data-aos='fade-up'
                   data-aos-duration='1000'
                   data-aos-delay={delay}
+                  data-aos-once
                 >
                   <div className='flex-1 rounded-[8px] bg-[#f1f1f1] p-[20px]'>
                     <p>
@@ -74,6 +81,7 @@ const AboutUs: React.FC = () => {
         data-aos='fade-up'
         data-aos-duration='1000'
         data-aos-delay='600'
+        data-aos-once
       >
         <p className='text-lg tracking-widest'>吾慢生活．境舒享悠</p>
         <p className='text-lg tracking-widest'>尊享客製．細緻品味</p>
