@@ -5,7 +5,7 @@ import AOS from 'aos';
 import ceoImage from '@/public/CEO.png';
 import { ceoExp } from '@/public/constants';
 
-const AboutUs: React.FC = () => {
+const AboutUsPage: React.FC = () => {
   React.useEffect(() => {
     AOS.init(); // 初始化 AOS 動畫庫
   }, []);
@@ -90,4 +90,4 @@ const AboutUs: React.FC = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsPage;
