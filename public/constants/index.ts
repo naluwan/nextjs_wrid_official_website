@@ -18,7 +18,7 @@ export const NAV_LINKS = [
   { href: '/about', key: 'about', label: '關於我們' },
   { href: '/process', key: 'process', label: '設計流程' },
   { href: '/pricing', key: 'pricing', label: '收費標準' },
-  { href: '/contact', key: 'contact', label: '聯繫我們' },
+  { href: '/contact', key: 'contact', label: '聯絡我們' },
 ];
 
 export type CollectionType = {

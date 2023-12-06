@@ -51,7 +51,7 @@ const AboutUsPage: React.FC = () => {
 
         <div>
           {/* 時間軸 */}
-          <h1 className='text-center text-xl text-[#fdfdfd]'>設計旅程</h1>
+          <h1 className='text-center text-xl'>設計旅程</h1>
           <ul className='relative mx-auto max-w-[1200px] list-none p-[20px]'>
             {ceoExp.map((item, idx) => {
               const delay = 600 + idx * 200;
