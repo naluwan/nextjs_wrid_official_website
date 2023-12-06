@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import fbIcon from '@/public/fbIcon.png';
-import igIcon from '@/public/igIcon.png';
-import lineIcon from '@/public/lineIcon.png';
-import footerIcon from '@/public/logo.png';
+import fbIcon from '@/public/fbIconWhite.png';
+import igIcon from '@/public/igIconWhite.png';
+import lineIcon from '@/public/lineIconWhite.png';
+import footerIcon from '@/public/newLogoWhite.png';
 import { cn } from '@/lib/utils';
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className='3xl:px-0 mx-auto mt-8 h-auto max-w-[1440px] px-6 py-4 lg:px-20'>
+    <footer className='3xl:px-0 mx-auto mt-8 h-auto max-w-[1440px] px-6 py-4 text-white lg:px-20'>
       <div className='flex justify-evenly max-md:flex-col max-md:items-center'>
         <Image
           src={footerIcon}
@@ -42,7 +42,7 @@ const Footer = () => {
             <p>聯絡電話：0900-427-410</p>
             <p>官方Line：evannn219</p>
             <p>E-mail：wurealm.design@gmail.com</p>
-            <div className='flex items-center justify-center gap-x-2 md:justify-start'>
+            <div className='mt-2 flex items-center justify-center gap-x-2 md:justify-start'>
               {socialMediaData.map((item) => (
                 <div className='group' key={item.title}>
                   <a href={item.src} target='_black'>
@@ -51,8 +51,9 @@ const Footer = () => {
                       alt='fbBtn'
                       className={cn(
                         'h-8 w-8 transition-all duration-300 group-hover:scale-110',
-                        item.title === 'line' && 'h-11 w-11',
-                        item.title === 'facebook' && 'mr-2',
+                        item.title === 'line' && 'h-8 w-8',
+                        (item.title === 'facebook' || item.title === 'instagram') &&
+                          'mr-2',
                       )}
                       priority
                     />
