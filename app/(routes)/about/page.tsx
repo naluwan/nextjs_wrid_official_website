@@ -11,7 +11,7 @@ const AboutUsPage: React.FC = () => {
   }, []);
 
   return (
-    <div className='mx-auto p-4 sm:p-16'>
+    <div className='mx-auto p-8 sm:p-16'>
       <div
         className='text-center'
         data-aos='fade-up'
