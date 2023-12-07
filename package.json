@@ -7,10 +7,10 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && touch ./out/.nojekyll",
+    "build": "next build",
     "start": "npx serve@latest out",
     "lint": "next lint",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && touch ./out/.nojekyll",
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
