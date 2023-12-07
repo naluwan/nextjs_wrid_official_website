@@ -2,6 +2,7 @@ import Footer from '@/components/Footer';
 import './globals.css';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
+import { ToastProvider } from '@/components/providers/toaster-provider';
 // import { Inter } from 'next/font/google';
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -20,7 +21,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang='zh-tw'>
       <body className='hide-scrollbar h-auto'>
         <Navbar />
-        <main className='mx-auto h-full min-h-[910px] max-w-[1440px]'>{children}</main>
+        <main className='mx-auto h-full min-h-[910px] max-w-[1440px]'>
+          <ToastProvider />
+          {children}
+        </main>
         {/* <div className='w-full border-t border-dashed border-white' /> */}
         <Footer />
       </body>
