@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'KuMincho';
-  src: url('/nextjs_wrid_official_website/fonts/KuMincho-R_beta.otf') format('opentype');
+  src: url('/fonts/KuMincho-R_beta.otf') format('opentype');
 }
 
 @layer base {
