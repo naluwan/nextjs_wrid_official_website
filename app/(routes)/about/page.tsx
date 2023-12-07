@@ -65,7 +65,7 @@ const AboutUsPage: React.FC = () => {
                   data-aos-once
                 >
                   <div className='flex-1 rounded-[8px] bg-[#f1f1f1] p-[20px]'>
-                    <p>
+                    <p className='text-sm md:text-base'>
                       {item.title}, {item.cardTitle}
                     </p>
                   </div>
