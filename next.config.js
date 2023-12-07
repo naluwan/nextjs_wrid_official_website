@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/nextjs_wrid_official_website',
+  basePath: '/https://wrid-256accec93b6.herokuapp.com',
   images: {
     unoptimized: true,
   },
