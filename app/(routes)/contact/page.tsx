@@ -85,7 +85,7 @@ const ContactPage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      await axios.post('/nextjs_wrid_official_website/api/contactus', values);
+      await axios.post('/api/contactus', values);
       toast.success('信件已送出，我們將盡快給您回覆');
       form.reset({
         name: '',
