@@ -115,6 +115,8 @@ const ContactPage = () => {
                     <Image
                       src={item.icon as StaticImageData}
                       alt='LineBtn'
+                      width={8}
+                      height={8}
                       className='h-8 w-8'
                     />
                   </Link>
