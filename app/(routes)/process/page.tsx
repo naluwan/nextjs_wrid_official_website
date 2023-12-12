@@ -13,6 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import TimeLine from '@/components/TimeLine';
+import { ArrowUpToLine } from 'lucide-react';
 
 const ProcessPage: React.FC = () => {
   const steps = [
@@ -64,6 +65,19 @@ const ProcessPage: React.FC = () => {
     <div className='container mx-auto p-8'>
       <h1 className='mb-4 text-3xl font-bold'>設計流程</h1>
       <TimeLine data={steps} />
+      <button
+        className='sticky bottom-4 left-[100%] mt-4 flex h-6 w-6 items-center justify-center rounded-full bg-black p-4 dark:bg-white md:p-6'
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          })
+        }
+      >
+        <div>
+          <ArrowUpToLine className='h-5 w-5 text-white dark:text-black md:h-8 md:w-8' />
+        </div>
+      </button>
     </div>
   );
 };
