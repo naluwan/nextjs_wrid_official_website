@@ -7,9 +7,7 @@ import dynamic from 'next/dynamic';
 const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const HomeCollection = () => {
-  const [collections] = React.useState<CollectionType[] | []>(
-    collectionsData.slice(0, 7),
-  );
+  const [collections, setCollections] = React.useState<CollectionType[] | null>(null);
 
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedCollection, setSelectedCollection] =
@@ -19,6 +17,10 @@ const HomeCollection = () => {
     setIsModalOpen(true);
     setSelectedCollection(collection);
   };
+
+  React.useEffect(() => {
+    setCollections(collectionsData.slice(0, 7));
+  }, []);
 
   return (
     <section className='mt-8'>
@@ -37,7 +39,7 @@ const HomeCollection = () => {
         data-aos-delay='600'
         data-aos-once
       >
-        {collections.slice(0, 3).map((item) => (
+        {collections?.slice(0, 3).map((item) => (
           <CollectionImage
             img={item.images[0].img}
             name={item.label}
@@ -53,7 +55,7 @@ const HomeCollection = () => {
         data-aos-delay='1000'
         data-aos-once
       >
-        {collections.slice(4, 7).map((item) => (
+        {collections?.slice(4, 7).map((item) => (
           <CollectionImage
             img={item.images[0].img}
             name={item.label}
