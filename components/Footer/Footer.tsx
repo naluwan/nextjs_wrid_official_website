@@ -31,12 +31,22 @@ const Footer = () => {
           alt='footer logo'
           width={180}
           height={60}
-          className='h-[200px] w-[192px]'
+          className='hidden h-[200px] w-[192px] md:block'
           priority
         />
         <div className='flex flex-col items-center justify-center p-4'>
-          <h1 className='text-4xl tracking-wide max-md:text-2xl'>聯絡我們</h1>
-          <div className='max-md:text-xs'>
+          <div className='relative mb-2 flex w-full justify-center'>
+            <Image
+              src={footerIcon}
+              alt='footer logo'
+              width={180}
+              height={60}
+              className='absolute left-0 block h-[25px] w-[30px] md:hidden'
+              priority
+            />
+            <h1 className='text-xl font-bold tracking-wide max-md:text-xl'>聯絡我們</h1>
+          </div>
+          <div className='text-base max-md:text-xs'>
             <p>整新、裝潢、設計等任何問題</p>
             <p>可透過Line或E-mail，我們將盡快回覆</p>
             <p>聯絡電話：0900-427-410</p>

@@ -63,7 +63,7 @@ const ProcessPage: React.FC = () => {
 
   return (
     <div className='container mx-auto p-8'>
-      <h1 className='mb-4 text-3xl font-bold'>設計流程</h1>
+      <h1 className='mb-4 text-xl font-bold md:text-2xl'>設計流程</h1>
       <TimeLine data={steps} />
       <button
         className='sticky bottom-4 left-[100%] mt-4 flex h-6 w-6 items-center justify-center rounded-full bg-black p-4 dark:bg-white md:p-6'

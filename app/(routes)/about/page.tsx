@@ -19,7 +19,7 @@ const AboutUsPage: React.FC = () => {
         data-aos-once
       >
         {/* 文字介紹 */}
-        <h1 className='mb-4 text-xl font-bold md:text-3xl'>
+        <h1 className='mb-4 text-xl font-bold md:text-2xl'>
           住宅設計 ｜客變規劃 ｜ 商業空間
         </h1>
         <div>

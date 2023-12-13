@@ -15,12 +15,12 @@ const CollectionImage = ({ img, name, onClick }: CollectionImageProps) => {
         alt='collection img'
         width={300}
         height={200}
-        className='h-auto w-full object-cover transition-all delay-500 duration-300 ease-in-out group-hover:scale-110'
+        className='h-auto w-auto object-cover transition-all delay-500 duration-300 ease-in-out group-hover:scale-110'
         priority
       />
       <div className='absolute left-0 top-0 z-20 h-full w-full bg-black/40 opacity-0 delay-200 duration-1000 group-hover:opacity-100'>
         <div className='flex h-full w-full flex-col items-start justify-center px-4'>
-          <span className='text-2xl tracking-widest text-white'>{name}</span>
+          <span className='text-lg tracking-widest text-white md:text-xl'>{name}</span>
           <div className='flex w-full items-center pt-2'>
             <button
               onClick={onClick}

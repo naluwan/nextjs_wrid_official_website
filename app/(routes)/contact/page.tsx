@@ -101,7 +101,7 @@ const ContactPage = () => {
   return (
     <div className='mx-auto flex h-full w-full flex-col justify-between p-8 md:flex-row'>
       <div className='w-full pb-6 md:pb-0'>
-        <h1 className='text-center text-2xl font-bold'>聯絡資訊</h1>
+        <h1 className='text-center text-xl font-bold md:text-2xl'>聯絡資訊</h1>
         <div className='py-4'>
           {/* 聯絡資訊 */}
           {contactData.map((item) => {
@@ -120,7 +120,7 @@ const ContactPage = () => {
                       className='h-8 w-8'
                     />
                   </Link>
-                  <div className='px-4 text-lg max-md:p-0 max-md:py-4'>
+                  <div className='px-4 text-base max-md:p-0 max-md:py-4 md:text-lg'>
                     <a href={item.src} target='_blank' rel='noreferrer'>
                       <h1 className='font-semibold'>{item.title}</h1>
                     </a>
@@ -135,7 +135,7 @@ const ContactPage = () => {
                 key={item.title}
               >
                 {item.icon as React.ReactNode}
-                <div className='px-4 text-lg max-md:p-0 max-md:py-4'>
+                <div className='px-4 text-base max-md:p-0 max-md:py-4 md:text-lg'>
                   <h1 className='font-semibold'>{item.title}</h1>
                   <h1>{item.content}</h1>
                 </div>
@@ -161,7 +161,7 @@ const ContactPage = () => {
       </div>
 
       <div className='w-full'>
-        <h1 className='text-center text-2xl'>聯絡我們</h1>
+        <h1 className='text-center text-xl md:text-2xl'>聯絡我們</h1>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='mt-8 space-y-8'>
             <FormField

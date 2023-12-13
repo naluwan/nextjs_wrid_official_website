@@ -24,9 +24,9 @@ const MobileSidebar = () => {
           <div className='p-6'>
             <Image
               src={sheetLogo}
-              width={140}
-              height={40}
-              className='h-[96px] w-[192px]'
+              width={100}
+              height={60}
+              className='h-[60px] w-[90px]'
               alt='sheet-logo'
             />
           </div>

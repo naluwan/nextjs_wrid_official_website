@@ -26,7 +26,7 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <div className='container mx-auto p-8'>
-      <h1 className='mb-4 text-3xl font-bold'>作品集</h1>
+      <h1 className='mb-4 text-xl font-bold md:text-2xl'>作品集</h1>
       <div className='mb-8 flex flex-col md:flex-row'>
         <p>吾 亦以居者為中心發想</p>
         <p className='hidden md:block'>，</p>
@@ -43,7 +43,7 @@ const PortfolioPage: React.FC = () => {
               setSelectedCategory(category);
               setSelectedCollection(null);
             }}
-            className={`mr-4 rounded px-4 py-2 ${
+            className={`mr-4 rounded p-2 text-sm md:px-4 md:text-base ${
               selectedCategory === category
                 ? 'bg-blue-500 text-white'
                 : 'bg-gray-200 text-gray-700'
@@ -67,7 +67,9 @@ const PortfolioPage: React.FC = () => {
                 }}
               >
                 <div className='transform rounded-lg bg-white p-4 shadow-md transition-transform hover:scale-105'>
-                  <h2 className='mb-2 text-xl font-bold'>{collection.label}</h2>
+                  <h2 className='mb-2 text-lg font-bold md:text-xl'>
+                    {collection.label}
+                  </h2>
                   <div className='grid grid-cols-1 gap-4'>
                     {collection.images.map((image) => (
                       <div key={image.id}>

@@ -23,7 +23,7 @@ const HomeCollection = () => {
   return (
     <section className='mt-8'>
       <h2
-        className='mb-4 text-2xl font-bold'
+        className='mb-4 text-xl font-bold md:text-2xl'
         data-aos='fade-up'
         data-aos-delay='800'
         data-aos-once

@@ -14,25 +14,25 @@ const Home = () => {
     <div className='bg-mi-bai'>
       <main className='p-8'>
         {/* 引導語 */}
-        <section className='text-center'>
-          <div className='flex flex-col items-center justify-center md:flex-row'>
-            <h2 className='mb-4 text-3xl font-bold' data-aos='fade-up' data-aos-once>
+        <section className='text-center tracking-widest'>
+          <div className='flex flex-col items-center justify-center text-xl  md:flex-row md:text-2xl'>
+            <h2 className='mb-4  font-bold ' data-aos='fade-up' data-aos-once>
               家乃身心歸依沉澱之處
             </h2>
-            <h2 className='mb-4 hidden text-3xl font-bold md:block' data-aos='fade-up'>
+            <h2 className='mb-4 hidden font-bold md:block' data-aos='fade-up'>
               ，
             </h2>
-            <h2 className='mb-4 text-3xl font-bold' data-aos='fade-up'>
+            <h2 className='mb-4 font-bold' data-aos='fade-up'>
               亦為喧囂中的一方淨土
             </h2>
           </div>
 
-          <p className='text-lg' data-aos='fade-up' data-aos-delay='200'>
+          <p className='text-base md:text-lg' data-aos='fade-up' data-aos-delay='200'>
             故以居者為核心發想
             <br />
             實亦輔虛，虛亦成境
           </p>
-          <p className='text-lg' data-aos='fade-up' data-aos-delay='400'>
+          <p className='text-base md:text-lg' data-aos='fade-up' data-aos-delay='400'>
             設計核心不侷限於實體架構
             <br />
             而是空間、人、自然的連結性

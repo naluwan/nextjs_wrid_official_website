@@ -20,7 +20,7 @@ const SidebarItem = ({ label, href, device }: SidebarItemProps) => {
   const ItemContent =
     device === 'desktop' ? (
       <>
-        <div className='flex items-center'>{label}</div>
+        <div className='flex items-center text-base'>{label}</div>
         <div
           className={cn(
             'mt-auto w-full border-2 border-slate-400 opacity-0 transition-all duration-500',

@@ -8,7 +8,7 @@ const Logo = () => {
       alt='logo'
       width={180}
       height={60}
-      className='aspect-auto h-[75px] w-[100px] max-md:h-[50px] max-md:w-[65px]'
+      className='h-[75px] w-[100px] max-md:h-[50px] max-md:w-[65px]'
       priority
     />
   );

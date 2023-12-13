@@ -12,7 +12,7 @@ import {
 const PricingPage = () => {
   return (
     <div className='mx-auto p-8 max-md:p-0'>
-      <h1 className='mb-4 text-3xl font-bold max-md:p-4'>收費標準</h1>
+      <h1 className='mb-4 text-xl font-bold max-md:p-4 md:text-2xl'>收費標準</h1>
 
       {/* 表格 */}
       <Table>
@@ -46,7 +46,7 @@ const PricingPage = () => {
 
       {/* 注意事項 */}
       <section className='mt-8 p-4'>
-        <h2 className='mb-4 text-2xl font-bold'>注意事項</h2>
+        <h2 className='mb-4 text-xl font-bold md:text-2xl'>注意事項</h2>
         <ul className='list-inside list-disc max-md:text-sm'>
           <li>委任設計/工程 最小承攬面積：15坪(實內設計坪)</li>
           <li>設計費用未滿20坪，以20坪計算(實內設計坪)</li>
