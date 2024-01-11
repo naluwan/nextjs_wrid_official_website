@@ -23,7 +23,7 @@ export async function POST(req: Request) {
       from: '吾境設計官網',
       to: process.env.EMAIL_ACCOUNT, // 替換成你想要接收郵件的信箱
       subject: `吾境設計 ${new Date(Date.now()).toLocaleDateString()} 有新顧客想要諮詢`,
-      text: `姓名: ${name}\nEmail: ${email}\n訊息: ${message}`,
+      text: `姓名: ${name}\n聯絡電話: ${phone}\nEmail: ${email}\n訊息: ${message}`,
     };
 
     // 發送郵件
