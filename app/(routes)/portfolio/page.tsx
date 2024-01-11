@@ -83,6 +83,7 @@ const PortfolioPage: React.FC = () => {
                           alt={image.name}
                           width={400}
                           height={300}
+                          placeholder='blur'
                           priority
                           className='h-auto w-auto rounded-md'
                         />
