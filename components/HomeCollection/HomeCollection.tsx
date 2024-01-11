@@ -1,4 +1,4 @@
-import { collectionsData } from '@/public/constants';
+import { CollectionType, collectionsData } from '@/public/constants';
 import CollectionImage from './_components/collection-image';
 import React from 'react';
 // import Slides from '../Sildes';
@@ -12,7 +12,7 @@ import 'yet-another-react-lightbox/styles.css';
 
 const HomeCollection = () => {
   // 精選案例設定
-  const [collections] = React.useState(collectionsData.slice(0, 7));
+  const [collections, setCollections] = React.useState<CollectionType[] | null>(null);
 
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedCollection, setSelectedCollection] = React.useState<SlideImage[] | null>(
@@ -24,9 +24,9 @@ const HomeCollection = () => {
     setSelectedCollection(images);
   };
 
-  // React.useEffect(() => {
-  //   setCollections(collectionsData.slice(0, 7));
-  // }, []);
+  React.useEffect(() => {
+    setCollections(collectionsData.slice(0, 7));
+  }, []);
 
   return (
     <>

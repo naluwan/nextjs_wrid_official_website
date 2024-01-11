@@ -10,8 +10,6 @@ import collection9 from '@/public/collections/collection9';
 import collection10 from '@/public/collections/collection10';
 import collection11 from '@/public/collections/collection11';
 import collection12 from '@/public/collections/collection12';
-import { StaticImageData } from 'next/image';
-import { Slide } from 'yet-another-react-lightbox/*';
 
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: '首頁' },
