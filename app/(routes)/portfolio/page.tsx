@@ -2,16 +2,20 @@
 import Image from 'next/image';
 import React from 'react';
 import { collectionsData, CollectionType } from '@/public/constants';
-import Slides from '@/components/Sildes/Slides';
-import dynamic from 'next/dynamic';
+// import Slides from '@/components/Sildes/Slides';
+// import dynamic from 'next/dynamic';
 import { ArrowUpToLine } from 'lucide-react';
+import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import NextJsImage from '@/components/NextJsImage';
 
-const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
+// const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
-  const [selectedCollection, setSelectedCollection] =
-    React.useState<CollectionType | null>(null);
+  const [selectedCollection, setSelectedCollection] = React.useState<SlideImage[] | null>(
+    null,
+  );
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const filteredCollections =
@@ -62,7 +66,7 @@ const PortfolioPage: React.FC = () => {
             <div key={collection.id}>
               <button
                 onClick={() => {
-                  setSelectedCollection(collection);
+                  setSelectedCollection(collection.images);
                   setIsModalOpen(true);
                 }}
               >
@@ -74,7 +78,7 @@ const PortfolioPage: React.FC = () => {
                     {collection.images.map((image) => (
                       <div key={image.id}>
                         <Image
-                          src={image.img}
+                          src={image.src}
                           alt={image.name}
                           width={400}
                           height={300}
@@ -89,7 +93,7 @@ const PortfolioPage: React.FC = () => {
             </div>
           ))}
       </div>
-      <DynamicModal
+      {/* <DynamicModal
         open={isModalOpen}
         onClose={() => {
           setIsModalOpen(false);
@@ -103,7 +107,13 @@ const PortfolioPage: React.FC = () => {
           autoPlay={false}
           key={selectedCollection?.id}
         />
-      </DynamicModal>
+      </DynamicModal> */}
+      <Lightbox
+        open={isModalOpen}
+        close={() => setIsModalOpen(false)}
+        slides={selectedCollection as SlideImage[]}
+        render={{ slide: NextJsImage }}
+      />
 
       <button
         className='sticky bottom-4 left-[100%] mt-4 flex h-6 w-6 items-center justify-center rounded-full bg-black p-4 dark:bg-white md:p-6'

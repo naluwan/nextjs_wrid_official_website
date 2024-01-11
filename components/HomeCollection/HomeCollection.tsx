@@ -1,26 +1,31 @@
-import { CollectionType, collectionsData } from '@/public/constants';
+import { collectionsData } from '@/public/constants';
 import CollectionImage from './_components/collection-image';
 import React from 'react';
-import Slides from '../Sildes';
-import dynamic from 'next/dynamic';
+// import Slides from '../Sildes';
+// import dynamic from 'next/dynamic';
+import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import NextJsImage from '../NextJsImage';
 
-const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
+// const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const HomeCollection = () => {
-  const [collections, setCollections] = React.useState<CollectionType[] | null>(null);
+  // 精選案例設定
+  const [collections] = React.useState(collectionsData.slice(0, 7));
 
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const [selectedCollection, setSelectedCollection] =
-    React.useState<CollectionType | null>(null);
+  const [selectedCollection, setSelectedCollection] = React.useState<SlideImage[] | null>(
+    null,
+  );
 
-  const clickImage = (collection: CollectionType) => {
+  const clickImage = (images: SlideImage[]) => {
     setIsModalOpen(true);
-    setSelectedCollection(collection);
+    setSelectedCollection(images);
   };
 
-  React.useEffect(() => {
-    setCollections(collectionsData.slice(0, 7));
-  }, []);
+  // React.useEffect(() => {
+  //   setCollections(collectionsData.slice(0, 7));
+  // }, []);
 
   return (
     <section className='mt-8'>
@@ -41,10 +46,10 @@ const HomeCollection = () => {
       >
         {collections?.slice(0, 3).map((item) => (
           <CollectionImage
-            img={item.images[0].img}
+            img={item.images[0].src}
             name={item.label}
             key={item.id}
-            onClick={() => clickImage(item)}
+            onClick={() => clickImage(item.images)}
           />
         ))}
       </div>
@@ -57,15 +62,15 @@ const HomeCollection = () => {
       >
         {collections?.slice(4, 7).map((item) => (
           <CollectionImage
-            img={item.images[0].img}
+            img={item.images[0].src}
             name={item.label}
             key={item.id}
-            onClick={() => clickImage(item)}
+            onClick={() => clickImage(item.images)}
           />
         ))}
       </div>
 
-      <DynamicModal
+      {/* <DynamicModal
         open={isModalOpen}
         onClose={() => {
           setIsModalOpen(false);
@@ -76,7 +81,13 @@ const HomeCollection = () => {
           autoPlay={false}
           key={selectedCollection?.id}
         />
-      </DynamicModal>
+      </DynamicModal> */}
+      <Lightbox
+        open={isModalOpen}
+        close={() => setIsModalOpen(false)}
+        slides={selectedCollection as SlideImage[]}
+        render={{ slide: NextJsImage }}
+      />
     </section>
   );
 };

@@ -1,8 +1,8 @@
 import { Search } from 'lucide-react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface CollectionImageProps {
-  img: StaticImageData;
+  img: string;
   name: string;
   onClick: () => void;
 }
