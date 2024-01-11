@@ -4,8 +4,9 @@ import React from 'react';
 // import Slides from '../Sildes';
 // import dynamic from 'next/dynamic';
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
-import NextJsImage from '../NextJsImage';
+// import NextJsImage from '../NextJsImage';
 
 // const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
@@ -86,7 +87,8 @@ const HomeCollection = () => {
         open={isModalOpen}
         close={() => setIsModalOpen(false)}
         slides={selectedCollection as SlideImage[]}
-        render={{ slide: NextJsImage }}
+        // render={{ slide: NextJsImage }}
+        plugins={[Zoom]}
       />
     </section>
   );

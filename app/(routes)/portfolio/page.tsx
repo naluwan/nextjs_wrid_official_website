@@ -6,8 +6,9 @@ import { collectionsData, CollectionType } from '@/public/constants';
 // import dynamic from 'next/dynamic';
 import { ArrowUpToLine } from 'lucide-react';
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
-import NextJsImage from '@/components/NextJsImage';
+// import NextJsImage from '@/components/NextJsImage';
 
 // const DynamicModal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
@@ -112,7 +113,7 @@ const PortfolioPage: React.FC = () => {
         open={isModalOpen}
         close={() => setIsModalOpen(false)}
         slides={selectedCollection as SlideImage[]}
-        render={{ slide: NextJsImage }}
+        plugins={[Zoom]}
       />
 
       <button
