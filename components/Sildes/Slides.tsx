@@ -43,7 +43,7 @@ const Slides: React.FC<SlidesProps> = (props) => {
         collection.images.map((image) => (
           <SwiperSlide key={`${image.name}-slide`}>
             <Image
-              src={image.img}
+              src={image.src}
               alt={image.name}
               width={300}
               height={200}
