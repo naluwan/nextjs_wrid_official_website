@@ -84,7 +84,7 @@ const PortfolioPage: React.FC = () => {
                           width={400}
                           height={300}
                           placeholder='blur'
-                          priority
+                          blurDataURL={image.src}
                           className='h-auto w-auto rounded-md'
                         />
                       </div>
