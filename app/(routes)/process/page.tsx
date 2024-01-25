@@ -73,7 +73,7 @@ const ProcessPage: React.FC = () => {
         ))}
       </div>
       <div className='item-center flex justify-center pt-6'>
-        <div className='grid grid-cols-1 text-gray-200 max-md:gap-y-4 md:grid-cols-2 md:gap-x-4 md:text-black'>
+        <div className='grid grid-cols-1 text-[#333] max-md:gap-y-4 md:grid-cols-2 md:gap-x-4'>
           <div className='text-sm'>
             <ul className='list-inside list-none md:list-disc'>
               <li>客變服務 - 3000元/坪</li>

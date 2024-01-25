@@ -64,7 +64,7 @@ const AboutUsPage: React.FC = () => {
                   data-aos-delay={delay}
                   data-aos-once
                 >
-                  <div className='flex-1 rounded-[8px] bg-[#f1f1f1] p-[20px]'>
+                  <div className='flex-1 rounded-[8px] bg-[#fff] p-[20px]'>
                     <p className='text-sm md:text-base'>
                       {item.title}, {item.cardTitle}
                     </p>
@@ -77,7 +77,7 @@ const AboutUsPage: React.FC = () => {
       </div>
 
       <div
-        className='flex h-full w-full flex-col items-center justify-start pt-0 text-center text-[#fdfdfd]'
+        className='flex h-full w-full flex-col items-center justify-start pt-0 text-center text-[#333]'
         data-aos='fade-up'
         data-aos-duration='1000'
         data-aos-delay='600'
