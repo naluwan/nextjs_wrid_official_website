@@ -25,6 +25,8 @@ import Link from 'next/link';
 import fbBtn from '@/public/fbBtn.png';
 import igBtn from '@/public/igBtn.png';
 import { Textarea } from '@/components/ui/textarea';
+import GoogleMaps from './_component/GoogleMaps';
+import { Combobox } from '@/components/ui/combobox';
 
 const contactData = [
   {
@@ -63,10 +65,26 @@ const socialMediaData = [
   },
 ];
 
+const areaOptions = [
+  { label: '台北', value: '台北' },
+  { label: '新北', value: '新北' },
+  { label: '桃園', value: '桃園' },
+  { label: '新竹', value: '新竹' },
+  { label: '台中', value: '台中' },
+  { label: '台南', value: '台南' },
+  { label: '高雄', value: '高雄' },
+  { label: '上海', value: '上海' },
+  { label: '深圳', value: '深圳' },
+  { label: '其他', value: '其他' },
+];
+
 const formSchema = z.object({
   name: z.string().min(1, { message: '欄位不可為空' }),
   email: z.string().min(1, { message: '欄位不可為空' }).email('請出入有效的Email'),
   phone: z.string().min(1, { message: '欄位不可為空' }),
+  size: z.string().min(1, { message: '欄位不可為空' }),
+  area: z.string().min(1),
+  budget: z.string().min(1),
   message: z.string(),
 });
 
@@ -77,6 +95,9 @@ const ContactPage = () => {
       name: '',
       email: '',
       phone: '',
+      size: '',
+      area: '',
+      budget: '',
       message: '',
     },
   });
@@ -91,6 +112,9 @@ const ContactPage = () => {
         name: '',
         email: '',
         phone: '',
+        size: '',
+        area: '',
+        budget: '',
         message: '',
       });
     } catch {
@@ -101,47 +125,52 @@ const ContactPage = () => {
   return (
     <div className='mx-auto flex h-full w-full flex-col justify-between p-8 md:flex-row'>
       <div className='w-full pb-6 md:pb-0'>
-        <h1 className='text-center text-xl font-bold md:text-2xl'>聯絡資訊</h1>
+        <h1 className='text-center text-lg font-bold'>聯絡資訊</h1>
         <div className='py-4'>
+          <div className='h-[500px] w-full p-0 pb-6 md:p-6'>
+            <GoogleMaps />
+          </div>
           {/* 聯絡資訊 */}
-          {contactData.map((item) => {
-            if (item.title === 'Line') {
+          <div className='grid grid-cols-1 md:grid-cols-2'>
+            {contactData.map((item) => {
+              if (item.title === 'Line') {
+                return (
+                  <div
+                    className='flex items-center pb-4 max-md:flex-col max-md:items-start'
+                    key={item.title}
+                  >
+                    <Link href={item.src as string} target='_blank' rel='noreferrer'>
+                      <Image
+                        src={item.icon as StaticImageData}
+                        alt='LineBtn'
+                        width={8}
+                        height={8}
+                        className='h-8 w-8'
+                      />
+                    </Link>
+                    <div className='md:text-md px-4 text-base max-md:p-0 max-md:py-4'>
+                      <a href={item.src} target='_blank' rel='noreferrer'>
+                        <h1 className='font-semibold'>{item.title}</h1>
+                      </a>
+                      <h1>{item.content}</h1>
+                    </div>
+                  </div>
+                );
+              }
               return (
                 <div
                   className='flex items-center pb-4 max-md:flex-col max-md:items-start'
                   key={item.title}
                 >
-                  <Link href={item.src as string} target='_blank' rel='noreferrer'>
-                    <Image
-                      src={item.icon as StaticImageData}
-                      alt='LineBtn'
-                      width={8}
-                      height={8}
-                      className='h-8 w-8'
-                    />
-                  </Link>
-                  <div className='px-4 text-base max-md:p-0 max-md:py-4 md:text-lg'>
-                    <a href={item.src} target='_blank' rel='noreferrer'>
-                      <h1 className='font-semibold'>{item.title}</h1>
-                    </a>
+                  {item.icon as React.ReactNode}
+                  <div className='md:text-md px-4 text-base max-md:p-0 max-md:py-4'>
+                    <h1 className='font-semibold'>{item.title}</h1>
                     <h1>{item.content}</h1>
                   </div>
                 </div>
               );
-            }
-            return (
-              <div
-                className='flex items-center pb-4 max-md:flex-col max-md:items-start'
-                key={item.title}
-              >
-                {item.icon as React.ReactNode}
-                <div className='px-4 text-base max-md:p-0 max-md:py-4 md:text-lg'>
-                  <h1 className='font-semibold'>{item.title}</h1>
-                  <h1>{item.content}</h1>
-                </div>
-              </div>
-            );
-          })}
+            })}
+          </div>
         </div>
 
         {/* 社群連結 */}
@@ -161,50 +190,128 @@ const ContactPage = () => {
       </div>
 
       <div className='w-full'>
-        <h1 className='text-center text-xl md:text-2xl'>聯絡我們</h1>
+        <h1 className='text-center text-lg'>聯絡我們</h1>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='mt-8 space-y-8'>
-            <FormField
-              control={form.control}
-              name='name'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>姓名</FormLabel>
-                  <FormControl>
-                    <Input disabled={isSubmitting} {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* 姓名 電話 */}
+            <div className='flex justify-center'>
+              <div className='flex w-full justify-center gap-x-4'>
+                <div className='w-full'>
+                  <FormField
+                    control={form.control}
+                    name='name'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>姓名</FormLabel>
+                        <FormControl>
+                          <Input disabled={isSubmitting} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
-            <FormField
-              control={form.control}
-              name='phone'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>聯絡電話</FormLabel>
-                  <FormControl>
-                    <Input disabled={isSubmitting} {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                <div className='w-full'>
+                  <FormField
+                    control={form.control}
+                    name='phone'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>聯絡電話</FormLabel>
+                        <FormControl>
+                          <Input disabled={isSubmitting} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+              </div>
+            </div>
 
-            <FormField
-              control={form.control}
-              name='email'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input disabled={isSubmitting} {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* email 地區 */}
+            <div className='flex justify-center'>
+              <div className='flex w-full justify-center gap-x-4'>
+                <div className='w-full'>
+                  <FormField
+                    control={form.control}
+                    name='email'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input disabled={isSubmitting} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <div className='w-full'>
+                  <FormField
+                    control={form.control}
+                    name='area'
+                    render={({ field }) => {
+                      // 因為combobox不能接受ref，而field裡面有ref，所以只將需要用到的value和onChange拿出來
+                      const { value, onChange } = field;
+                      return (
+                        <FormItem>
+                          <FormLabel>地區</FormLabel>
+                          <FormControl>
+                            <Combobox
+                              options={[...areaOptions]}
+                              onChange={onChange}
+                              value={value}
+                              title={'地區'}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      );
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* 坪數 預算 */}
+            <div className='flex justify-center'>
+              <div className='flex w-full justify-center gap-x-4'>
+                <div className='w-full'>
+                  <FormField
+                    control={form.control}
+                    name='size'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>坪數</FormLabel>
+                        <FormControl>
+                          <Input disabled={isSubmitting} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <div className='w-full'>
+                  <FormField
+                    control={form.control}
+                    name='budget'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>預算</FormLabel>
+                        <FormControl>
+                          <Input disabled={isSubmitting} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+              </div>
+            </div>
 
             <FormField
               control={form.control}
@@ -213,16 +320,16 @@ const ContactPage = () => {
                 <FormItem>
                   <FormLabel>洽詢內容</FormLabel>
                   <FormControl>
-                    <Textarea disabled={isSubmitting} {...field} rows={10} />
+                    <Textarea disabled={isSubmitting} {...field} rows={11} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
 
-            <div className='flex items-center gap-x-2'>
+            <div className='flex items-center justify-end gap-x-2'>
               <Button type='submit' disabled={!isValid || isSubmitting}>
-                送出
+                立即諮詢
               </Button>
             </div>
           </form>

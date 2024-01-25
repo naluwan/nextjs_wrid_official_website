@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   try {
-    const { name, email, phone, message } = await req.json();
+    const { name, email, phone, size, area, budget, message } = await req.json();
 
-    if (!name || !email || !phone) {
+    if (!name || !email || !phone || !size || !area || !budget) {
       return new NextResponse('姓名、電話和Email為必填欄位', { status: 400 });
     }
 
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
       from: '吾境設計官網',
       to: process.env.EMAIL_ACCOUNT, // 替換成你想要接收郵件的信箱
       subject: `吾境設計 ${new Date(Date.now()).toLocaleDateString()} 有新顧客想要諮詢`,
-      text: `姓名: ${name}\n聯絡電話: ${phone}\nEmail: ${email}\n訊息: ${message}`,
+      text: `姓名: ${name}\n聯絡電話: ${phone}\nEmail: ${email}\n地區: ${area}\n坪數: ${size}\n預算: ${budget}\n訊息: ${message}`,
     };
 
     // 發送郵件

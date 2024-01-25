@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import { ToastProvider } from '@/components/providers/toaster-provider';
+
 // import { Inter } from 'next/font/google';
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -19,9 +20,11 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='zh-tw'>
-      <body className='hide-scrollbar h-auto'>
-        <Navbar />
-        <main className='mx-auto h-full min-h-[910px] max-w-[1440px]'>
+      <body className='hide-scrollbar relative h-auto'>
+        <div className='sticky top-0 z-50 bg-white shadow-md'>
+          <Navbar />
+        </div>
+        <main className='mx-auto h-auto max-w-[1440px]'>
           <ToastProvider />
           {children}
         </main>

@@ -17,7 +17,7 @@ export const NAV_LINKS = [
   { href: '/portfolio', key: 'portfolio', label: '作品集' },
   { href: '/about', key: 'about', label: '關於我們' },
   { href: '/process', key: 'process', label: '設計流程' },
-  { href: '/pricing', key: 'pricing', label: '收費標準' },
+  // { href: '/pricing', key: 'pricing', label: '收費標準' },
   { href: '/contact', key: 'contact', label: '聯絡我們' },
 ];
 
@@ -122,19 +122,19 @@ export const collectionsData = [
   },
   {
     id: 'collection8',
-    label: '東湖',
+    label: '桃園',
     category: 'home',
     images: [
-      { id: 42, name: '東湖1', src: collection8.image1.src },
-      { id: 43, name: '東湖2', src: collection8.image2.src },
-      { id: 44, name: '東湖3', src: collection8.image3.src },
-      { id: 45, name: '東湖4', src: collection8.image4.src },
-      { id: 46, name: '東湖5', src: collection8.image5.src },
+      { id: 42, name: '桃園1', src: collection8.image1.src },
+      { id: 43, name: '桃園2', src: collection8.image2.src },
+      { id: 44, name: '桃園3', src: collection8.image3.src },
+      { id: 45, name: '桃園4', src: collection8.image4.src },
+      { id: 46, name: '桃園5', src: collection8.image5.src },
     ],
   },
   {
     id: 'collection9',
-    label: '新生南-家',
+    label: '新生南',
     category: 'home',
     images: [
       { id: 47, name: '新生南1', src: collection9.image1.src },
@@ -166,7 +166,6 @@ export const collectionsData = [
       { id: 59, name: '林口1', src: collection11.image1.src },
       { id: 60, name: '林口2', src: collection11.image2.src },
       { id: 61, name: '林口3', src: collection11.image3.src },
-      { id: 62, name: '林口4', src: collection11.image4.src },
     ],
   },
   {

@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import { NAV_LINKS } from '@/public/constants';
 import React from 'react';
 import Image from 'next/image';
-import sheetLogo from '@/public/logo.png';
+import sheetLogo from '@/public/newLogo-1.png';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -26,12 +26,12 @@ const MobileSidebar = () => {
               src={sheetLogo}
               width={100}
               height={60}
-              className='h-[60px] w-[90px]'
+              className='h-[40px] w-[60px]'
               alt='sheet-logo'
             />
           </div>
           <div className='flex h-full w-full flex-col'>
-            <div className={cn('flex w-full flex-col items-start gap-y-2')}>
+            <div className={cn('flex w-full flex-col items-start gap-y-6')}>
               {routes.map((route) => {
                 const isActive =
                   (pathName === '/' && route.href === '/') ||

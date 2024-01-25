@@ -31,8 +31,8 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <div className='container mx-auto p-8'>
-      <h1 className='mb-4 text-xl font-bold md:text-2xl'>作品集</h1>
-      <div className='mb-8 flex flex-col md:flex-row'>
+      <h1 className='mb-4 text-lg font-bold'>作品集</h1>
+      <div className='mb-8 flex  flex-col text-[12px] md:flex-row'>
         <p>吾 亦以居者為中心發想</p>
         <p className='hidden md:block'>，</p>
         <p>境 即是描摹故事的場域</p>
@@ -48,9 +48,9 @@ const PortfolioPage: React.FC = () => {
               setSelectedCategory(category);
               setSelectedCollection(null);
             }}
-            className={`mr-4 rounded p-2 text-sm md:px-4 md:text-base ${
+            className={`mr-4 rounded p-2 text-sm md:px-4 md:text-sm ${
               selectedCategory === category
-                ? 'bg-blue-500 text-white'
+                ? 'bg-gray-400 text-white'
                 : 'bg-gray-200 text-gray-700'
             }`}
           >
@@ -62,7 +62,7 @@ const PortfolioPage: React.FC = () => {
       {/* 作品集展示 */}
       <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         {filteredCollections
-          .sort((a, b) => a.images.length - b.images.length)
+          .sort((a, b) => b.images.length - a.images.length)
           .map((collection: CollectionType) => (
             <div key={collection.id}>
               <button
@@ -71,8 +71,8 @@ const PortfolioPage: React.FC = () => {
                   setIsModalOpen(true);
                 }}
               >
-                <div className='transform rounded-lg bg-white p-4 shadow-md transition-transform hover:scale-105'>
-                  <h2 className='mb-2 text-lg font-bold md:text-xl'>
+                <div className='transform rounded-lg bg-transparent p-4 transition-transform duration-500 hover:scale-105 hover:shadow-xl'>
+                  <h2 className='text-md mb-2 font-bold md:text-lg'>
                     {collection.label}
                   </h2>
                   <div className='grid grid-cols-1 gap-4'>
