@@ -77,7 +77,7 @@ const Footer = () => {
         <p className='m-0'>
           Copyright 2023 © Wurealm Design Co. Ltd. All rights reserved.
         </p>
-        <p className='m-0'>Powered by NaLuWan</p>
+        <p className='m-0'>Powered by 仨恩網頁設計工作室</p>
       </div>
     </footer>
   );
