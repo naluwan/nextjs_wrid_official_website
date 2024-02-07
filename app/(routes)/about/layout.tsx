@@ -3,7 +3,7 @@ import Page from './page';
 
 export const metadata: Metadata = {
   title: '關於我們',
-  description: '吾境設計總監 - 陳映志，吾慢生活，境舒享悠；尊享客製，細緻品味',
+  description: '室內設計 | 裝潢 | 室內設計推薦 | 老屋翻新',
 };
 
 export default Page;

@@ -66,16 +66,9 @@ const socialMediaData = [
 ];
 
 const areaOptions = [
-  { label: '台北', value: '台北' },
-  { label: '新北', value: '新北' },
-  { label: '桃園', value: '桃園' },
-  { label: '新竹', value: '新竹' },
-  { label: '台中', value: '台中' },
-  { label: '台南', value: '台南' },
-  { label: '高雄', value: '高雄' },
-  { label: '上海', value: '上海' },
-  { label: '深圳', value: '深圳' },
-  { label: '其他', value: '其他' },
+  { label: '北部', value: '北部' },
+  { label: '中部', value: '中部' },
+  { label: '南部', value: '南部' },
 ];
 
 const formSchema = z.object({

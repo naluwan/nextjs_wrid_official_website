@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import AOS from 'aos';
-import ceoImage from '@/public/CEO.png';
-import { ceoExp } from '@/public/constants';
 
 const AboutUsPage: React.FC = () => {
   React.useEffect(() => {
@@ -12,79 +9,84 @@ const AboutUsPage: React.FC = () => {
 
   return (
     <div className='mx-auto p-8 sm:p-16'>
-      <div
-        className='text-center'
-        data-aos='fade-up'
-        data-aos-duration='1000'
-        data-aos-once
-      >
-        {/* 文字介紹 */}
-        <h1 className='mb-4 text-xl font-bold md:text-2xl'>
-          住宅設計 ｜客變規劃 ｜ 商業空間
-        </h1>
-        <div>
-          <p>台北 · 台中 · 高雄</p>
-          <p>Mon. - Sat. 0800-1800</p>
-        </div>
-      </div>
-      <div
-        className='my-8 flex flex-col justify-around md:flex-row'
-        data-aos='fade-up'
-        data-aos-duration='1000'
-        data-aos-delay='400'
-        data-aos-once
-      >
-        <div className='flex flex-col items-center text-[#fdfdfd] max-md:mb-8'>
-          <div className='aspect-square max-h-[500px] max-w-[500px] overflow-hidden rounded-md p-6 md:p-0'>
-            {/* 照片 */}
-            <Image
-              src={ceoImage}
-              alt='Designer'
-              width={200}
-              height={300}
-              priority
-              className='h-auto w-auto'
-            />
+      <div className='flex flex-col items-start justify-between pb-8 md:flex-row md:p-28'>
+        {/* 左邊標語 */}
+        <div
+          className='grid gap-y-4 pb-4 md:pb-0'
+          data-aos='fade-right'
+          data-aos-easing='ease-in-out'
+        >
+          <h1 className='text-2xl font-extrabold'>吾境 -</h1>
+          <div className='w-1/3 border-b-4 border-gray-500' />
+          <div className='text-2xl'>
+            <p>
+              <span className='font-bold'>吾</span> 慢生活
+            </p>
+            <p>
+              <span className='font-bold'>境</span> 在眼前
+            </p>
           </div>
-          <p className='mt-2'>吾境設計總監 - 陳映志</p>
+          <div className='text-2xl'>
+            <p>盡顯您的品味</p>
+            <p>讓家的步調，慢下來</p>
+          </div>
         </div>
 
-        <div>
-          {/* 時間軸 */}
-          <h1 className='text-center text-xl'>設計旅程</h1>
-          <ul className='relative mx-auto max-w-[1200px] list-none p-[20px]'>
-            {ceoExp.map((item, idx) => {
-              const delay = 600 + idx * 200;
-              return (
-                <li
-                  key={item.title}
-                  className='relative mb-[50px] flex w-full justify-start'
-                  data-aos='fade-up'
-                  data-aos-duration='1000'
-                  data-aos-delay={delay}
-                  data-aos-once
-                >
-                  <div className='flex-1 rounded-[8px] bg-[#fff] p-[20px]'>
-                    <p className='text-sm md:text-base'>
-                      {item.title}, {item.cardTitle}
-                    </p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+        {/* 設計理念 */}
+        <div
+          className='grid w-full gap-y-4 md:w-1/2'
+          data-aos='fade-left'
+          data-aos-easing='ease-in-out'
+        >
+          <div className='flex'>
+            <p>家乃身心沉澱之處</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>喧囂中的一方淨土</p>
+          </div>
+          <div className='flex'>
+            <p>以居者為核心發想</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>實亦輔虛，虛亦成境</p>
+          </div>
+          <div>
+            <p>不侷限於實體架構</p>
+            <p>而以</p>
+            <p>空間、人、自然的連結性</p>
+          </div>
+          <div>
+            <p>回到大地本然的本質</p>
+            <p>重新構建出生活的輪廓</p>
+          </div>
         </div>
       </div>
 
-      <div
-        className='flex h-full w-full flex-col items-center justify-start pt-0 text-center text-[#333]'
-        data-aos='fade-up'
-        data-aos-duration='1000'
-        data-aos-delay='600'
-        data-aos-once
-      >
-        <p className='text-lg tracking-widest'>吾慢生活．境舒享悠</p>
-        <p className='text-lg tracking-widest'>尊享客製．細緻品味</p>
+      <div className='flex flex-col items-start justify-between md:flex-row md:p-28'>
+        {/* 管理團隊 */}
+        <div
+          className='grid gap-y-2 pb-4 md:pb-0'
+          data-aos='fade-right'
+          data-aos-easing='ease-in-out'
+        >
+          <h1 className='text-xl'>管理團隊</h1>
+          <div className='w-full border-b border-gray-500' />
+          <p>執行長CEO Eason 陳奕嘉</p>
+          <p>設計總監 Evan 陳映志</p>
+          <p>行政財務長 Andy 王彙均</p>
+        </div>
+
+        {/* 公司介紹 */}
+        <div
+          className='grid w-full gap-y-2 md:w-1/2'
+          data-aos='fade-left'
+          data-aos-easing='ease-in-out'
+        >
+          <h1 className='text-xl'>公司介紹</h1>
+          <div className='w-full border-b border-gray-500' />
+          <div>
+            <p>吾境設計在室內設計及工程裝修扎根十年經驗。</p>
+            <p>經歷無數磨練，以專業及優秀的設計團隊為每位客戶一對一服務。</p>
+          </div>
+        </div>
       </div>
     </div>
   );
