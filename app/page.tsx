@@ -25,7 +25,7 @@ const Home = () => {
         {/* 引導語 */}
         <section className='text-center tracking-widest'>
           <div className='flex flex-col items-center justify-center text-sm  md:flex-row md:text-lg'>
-            <h2 className='mb-4 font-bold' data-aos='fade-up' data-aos-once>
+            <h2 className='mb-4 font-bold' data-aos='fade-up'>
               家乃身心歸依沉澱之處
             </h2>
             <h2 className='mb-4 hidden font-bold md:block' data-aos='fade-up'>
