@@ -54,7 +54,6 @@ const HomeCollection = () => {
           className='mb-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
           data-aos='fade-up'
           data-aos-delay='600'
-          data-aos-once
         >
           {collections?.slice(0, 3).map((item) => (
             <CollectionImage
@@ -70,7 +69,6 @@ const HomeCollection = () => {
           className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
           data-aos='fade-up'
           data-aos-delay='1000'
-          data-aos-once
         >
           {collections?.slice(3, 7).map((item) => (
             <CollectionImage
