@@ -15,6 +15,24 @@ export const metadata: Metadata = {
   },
   description:
     '吾境室內設計，提供裝潢、設計、室內設計服務，服務內容大致分為以下，住宅設計、客變服務、新成屋、毛胚屋、實品屋、中古屋、辦公空間和商業空間',
+  icons: {
+    icon: '/favicon.io',
+  },
+  keywords: [
+    '室內設計',
+    '設計',
+    '裝潢',
+    '翻新',
+    '住宅設計',
+    '客變服務',
+    '新成屋',
+    '毛胚屋',
+    '實品屋',
+    '中古屋',
+    '辦公空間',
+    '商業空間',
+    '住宅',
+  ],
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
