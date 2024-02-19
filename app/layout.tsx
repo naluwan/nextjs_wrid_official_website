@@ -10,8 +10,8 @@ import { ToastProvider } from '@/components/providers/toaster-provider';
 
 export const metadata: Metadata = {
   title: {
-    default: '吾境設計',
-    template: '%s | 吾境設計',
+    default: '吾境設計 | 室內設計、工程裝修扎根十年經驗',
+    template: '%s' + ' | ' + '吾境設計',
   },
   description:
     '吾境室內設計，提供裝潢、設計、室內設計服務，服務內容大致分為以下，住宅設計、客變服務、新成屋、毛胚屋、實品屋、中古屋、辦公空間和商業空間',
