@@ -10,7 +10,7 @@ import { ToastProvider } from '@/components/providers/toaster-provider';
 
 export const metadata: Metadata = {
   title: {
-    default: '吾境設計 | 室內設計、工程裝修扎根十年經驗',
+    default: '吾境設計' + ' | ' + '室內設計、工程裝修扎根十年經驗',
     template: '%s' + ' | ' + '吾境設計',
   },
   description:

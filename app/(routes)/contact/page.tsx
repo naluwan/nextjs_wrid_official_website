@@ -81,7 +81,7 @@ const formSchema = z.object({
   message: z.string(),
 });
 
-const ContactPage = () => {
+const ContactPage: React.FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
