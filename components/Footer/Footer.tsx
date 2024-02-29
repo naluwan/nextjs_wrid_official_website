@@ -59,13 +59,13 @@ const Footer = () => {
           <p className='text-base max-md:text-xs'>營業時間：Mon. - Sat. 0800-1800</p>
         </div>
 
-        <div className='h-full w-full flex-col items-start justify-start py-4 text-base max-md:text-xs md:py-0'>
-          <p>聯絡我們</p>
+        <div className='hidden h-full w-full flex-col items-start justify-start py-4 text-base max-md:text-xs md:block md:py-0'>
+          {/* <p>聯絡我們</p>
           <p className='pt-2'>整新、裝潢、設計等任何問題</p>
-          <p className='pt-2'>可透過Line或E-mail詢問，我們將盡快回覆</p>
+          <p className='pt-2'>可透過Line或E-mail詢問，我們將盡快回覆</p> */}
         </div>
 
-        <div className='flex h-full w-full flex-col items-start justify-start text-base max-md:text-xs'>
+        <div className='mt-2 flex h-full w-full flex-col items-start justify-start text-base max-md:text-xs md:mt-0'>
           <p>聯絡電話：0900-427-410</p>
           <p className='pt-2'>官方Line：@038hsoeq</p>
           <p className='pt-2'>E-mail：wurealm.design@gmail.com</p>
