@@ -50,8 +50,7 @@ const AboutUsPage: React.FC = () => {
           </div>
           <div>
             <p>不侷限於實體架構</p>
-            <p>而以</p>
-            <p>空間、人、自然的連結性</p>
+            <p>而以空間、人、自然的連結性</p>
           </div>
           <div>
             <p>回到大地本然的本質</p>
@@ -69,9 +68,21 @@ const AboutUsPage: React.FC = () => {
         >
           <h1 className='text-xl'>管理團隊</h1>
           <div className='w-full border-b border-gray-500' />
-          <p>執行長CEO Eason 陳奕嘉</p>
-          <p>設計總監 Evan 陳映志</p>
-          <p>行政財務長 Andy 王彙均</p>
+          <div className='grid grid-cols-3 gap-x-4'>
+            <p>執行長</p>
+            <p>Eason</p>
+            <p>陳奕嘉</p>
+          </div>
+          <div className='grid grid-cols-3 gap-x-4'>
+            <p>設計總監</p>
+            <p>Evan</p>
+            <p>陳映志</p>
+          </div>
+          <div className='grid grid-cols-3 gap-x-4'>
+            <p>行政財務長</p>
+            <p>Andy</p>
+            <p>王彙均</p>
+          </div>
         </div>
 
         {/* 公司介紹 */}
@@ -83,8 +94,9 @@ const AboutUsPage: React.FC = () => {
           <h1 className='text-xl'>公司介紹</h1>
           <div className='w-full border-b border-gray-500' />
           <div>
-            <p>吾境設計在室內設計及工程裝修扎根十年經驗。</p>
-            <p>經歷無數磨練，以專業及優秀的設計團隊為每位客戶一對一服務。</p>
+            <p>
+              吾境設計在室內設計及工程裝修扎根十年經驗，經歷無數磨練，以專業及優秀的設計團隊為每位客戶一對一服務。
+            </p>
           </div>
         </div>
       </div>
