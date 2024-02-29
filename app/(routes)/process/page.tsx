@@ -24,7 +24,7 @@ const ProcessPage: React.FC = () => {
     {
       title: '設計提案',
       icon: faImages,
-      content: '提案内容包含：公區渲染圖、平面配置、動線配置、光影分析等',
+      content: '提案內容包含：公區渲染圖、平面配置、動線配置、光影分析等',
     },
     {
       title: '設計委任',
@@ -39,13 +39,13 @@ const ProcessPage: React.FC = () => {
     {
       title: '工程報價',
       icon: faMoneyBill,
-      content: '以設計圖面之内容為準則, 進行工程完整報價、材質打樣及進度排程討論',
+      content: '以設計圖面之內容為準則, 進行工程完整報價、材質打樣及進度排程討論',
     },
     {
       title: '工程合約',
       icon: faFileSignature,
       content:
-        '以設計圖面之内容附件合併至工程合約, 以合約進度收取階段性工程費用, 確保工程進度及品質及依照圖面施工',
+        '以設計圖面之內容附件合併至工程合約, 以合約進度收取階段性工程費用, 確保工程進度及品質及依照圖面施工',
     },
     {
       title: '完工交屋',
