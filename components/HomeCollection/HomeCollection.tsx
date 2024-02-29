@@ -26,15 +26,17 @@ const HomeCollection = () => {
 
   React.useEffect(() => {
     setCollections(
-      collectionsData.filter(
-        (collection) =>
-          collection.label === '敦化' ||
-          collection.label === '大直' ||
-          collection.label === '龜山' ||
-          collection.label === '南港' ||
-          collection.label === '桃園' ||
-          collection.label === '天母',
-      ),
+      collectionsData
+        .filter(
+          (collection) =>
+            collection.label === '敦化' ||
+            collection.label === '大直' ||
+            collection.label === '信義' ||
+            collection.label === '南港' ||
+            collection.label === '桃園' ||
+            collection.label === '天母',
+        )
+        .sort((a, b) => (a.order as number) - (b.order as number)),
     );
   }, []);
 

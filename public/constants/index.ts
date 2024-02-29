@@ -26,6 +26,7 @@ export type CollectionType = {
   label: string;
   category: string;
   images: { id: number; name: string; src: string }[];
+  order?: number;
 };
 
 export const collectionsData = [
@@ -38,6 +39,7 @@ export const collectionsData = [
       { id: 2, name: '天母2', src: collection1.image2.src },
       { id: 3, name: '天母3', src: collection1.image3.src },
     ],
+    order: 5,
   },
   {
     id: 'collection2',
@@ -52,6 +54,7 @@ export const collectionsData = [
       { id: 9, name: '敦化6', src: collection2.image6.src },
       { id: 10, name: '敦化7', src: collection2.image7.src },
     ],
+    order: 1,
   },
   {
     id: 'collection3',
@@ -83,16 +86,14 @@ export const collectionsData = [
   },
   {
     id: 'collection5',
-    label: '樹林',
+    label: '信義',
     category: 'home',
     images: [
-      { id: 25, name: '樹林1', src: collection5.image1.src },
-      { id: 26, name: '樹林2', src: collection5.image2.src },
-      { id: 27, name: '樹林3', src: collection5.image3.src },
-      { id: 28, name: '樹林4', src: collection5.image4.src },
-      { id: 29, name: '樹林5', src: collection5.image5.src },
-      { id: 69, name: '樹林5', src: collection5.image6.src },
+      { id: 25, name: '信義1', src: collection5.image1.src },
+      { id: 26, name: '信義2', src: collection5.image2.src },
+      { id: 27, name: '信義3', src: collection5.image3.src },
     ],
+    order: 0,
   },
   {
     id: 'collection6',
@@ -107,6 +108,7 @@ export const collectionsData = [
       { id: 35, name: '大直6', src: collection6.image6.src },
       { id: 36, name: '大直7', src: collection6.image7.src },
     ],
+    order: 2,
   },
   {
     id: 'collection7',
@@ -119,6 +121,7 @@ export const collectionsData = [
       { id: 40, name: '南港4', src: collection7.image4.src },
       { id: 41, name: '南港5', src: collection7.image5.src },
     ],
+    order: 3,
   },
   {
     id: 'collection8',
@@ -131,6 +134,7 @@ export const collectionsData = [
       { id: 45, name: '桃園4', src: collection8.image4.src },
       { id: 46, name: '桃園5', src: collection8.image5.src },
     ],
+    order: 4,
   },
   {
     id: 'collection9',
