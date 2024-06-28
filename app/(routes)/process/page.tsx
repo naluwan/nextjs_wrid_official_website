@@ -76,7 +76,7 @@ const ProcessPage: React.FC = () => {
         <div className='grid grid-cols-1 text-[#333] max-md:gap-y-4 md:grid-cols-2 md:gap-x-4'>
           <div className='text-sm'>
             <ul className='list-inside list-none md:list-disc'>
-              <li>客變服務 - 3000元/坪</li>
+              <li>客變服務 - 4500元/坪</li>
               <li>新成屋、商業空間、辦公空間 - 5000元/坪</li>
               <li>中古屋、毛胚屋、實品屋 - 6000元/坪</li>
             </ul>

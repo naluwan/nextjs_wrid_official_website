@@ -69,11 +69,6 @@ const AboutUsPage: React.FC = () => {
           <h1 className='text-xl'>管理團隊</h1>
           <div className='w-full border-b border-gray-500' />
           <div className='grid grid-cols-3 gap-x-4'>
-            <p>執行長</p>
-            <p>Eason</p>
-            <p>陳奕嘉</p>
-          </div>
-          <div className='grid grid-cols-3 gap-x-4'>
             <p>設計總監</p>
             <p>Evan</p>
             <p>陳映志</p>
