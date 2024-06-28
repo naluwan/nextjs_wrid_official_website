@@ -65,6 +65,7 @@ const AboutUsPage: React.FC = () => {
           className='grid gap-y-2 pb-4 md:pb-0'
           data-aos='fade-right'
           data-aos-easing='ease-in-out'
+          data-aos-once
         >
           <h1 className='text-xl'>管理團隊</h1>
           <div className='w-full border-b border-gray-500' />
@@ -85,6 +86,7 @@ const AboutUsPage: React.FC = () => {
           className='grid w-full gap-y-2 md:w-1/2'
           data-aos='fade-left'
           data-aos-easing='ease-in-out'
+          data-aos-once
         >
           <h1 className='text-xl'>公司介紹</h1>
           <div className='w-full border-b border-gray-500' />
