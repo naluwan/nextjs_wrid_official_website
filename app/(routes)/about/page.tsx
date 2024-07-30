@@ -17,8 +17,8 @@ const AboutUsPage: React.FC = () => {
           data-aos-easing='ease-in-out'
         >
           <h1 className='text-2xl font-extrabold'>吾境 -</h1>
-          <div className='w-1/3 border-b-4 border-gray-500' />
-          <div className='text-2xl'>
+          <div className='w-full border-b-4 border-gray-500' />
+          {/* <div className='text-2xl'>
             <p>
               <span className='font-bold'>吾</span> 慢生活
             </p>
@@ -29,7 +29,7 @@ const AboutUsPage: React.FC = () => {
           <div className='text-2xl'>
             <p>盡顯您的品味</p>
             <p>讓家的步調，慢下來</p>
-          </div>
+          </div> */}
         </div>
 
         {/* 設計理念 */}
@@ -67,7 +67,7 @@ const AboutUsPage: React.FC = () => {
           data-aos-easing='ease-in-out'
           data-aos-once
         >
-          <h1 className='text-xl'>管理團隊</h1>
+          {/* <h1 className='text-xl'>管理團隊</h1>
           <div className='w-full border-b border-gray-500' />
           <div className='grid grid-cols-3 gap-x-4'>
             <p>設計總監</p>
@@ -78,7 +78,7 @@ const AboutUsPage: React.FC = () => {
             <p>行政財務長</p>
             <p>Andy</p>
             <p>王彙均</p>
-          </div>
+          </div> */}
         </div>
 
         {/* 公司介紹 */}

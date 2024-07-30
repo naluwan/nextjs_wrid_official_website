@@ -48,7 +48,7 @@ const contactData = [
   {
     title: '地址',
     icon: <Map className='h-8 w-8' />,
-    content: '新北市樹林區忠孝街107號2樓',
+    content: '新北市板橋區光正街16巷24號',
   },
 ];
 

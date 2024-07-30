@@ -7,10 +7,7 @@ const GoogleMaps: React.FC = () => {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
   });
 
-  const center = React.useMemo(
-    () => ({ lat: 24.98069894748379, lng: 121.424667579672 }),
-    [],
-  );
+  const center = React.useMemo(() => ({ lat: 25.01774054450047, lng: 121.463397 }), []);
 
   if (!isLoaded)
     return (
