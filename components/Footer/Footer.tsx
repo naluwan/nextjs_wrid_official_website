@@ -32,7 +32,7 @@ const Footer = () => {
             alt='footer logo'
             width={180}
             height={60}
-            className='h-[90px] w-[200px]'
+            className='h-[92px] w-[200px]'
             priority
           />
         </div>

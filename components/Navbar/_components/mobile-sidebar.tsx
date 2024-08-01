@@ -26,7 +26,7 @@ const MobileSidebar = () => {
               src={sheetLogo}
               width={100}
               height={60}
-              className='h-[40px] w-[60px]'
+              className='h-[52px] w-[60px]'
               alt='sheet-logo'
             />
           </div>
@@ -66,7 +66,7 @@ const MobileSidebar = () => {
               })}
             </div>
           </div>
-          <div className='flex flex-col items-center justify-center py-2 text-[10px]'>
+          <div className='flex flex-col items-center justify-center py-2 text-[9px]'>
             <p className='m-0'> &copy; 2023 吾境設計有限公司 版權所有</p>
             <p className='m-0'>
               Copyright 2023 &copy; Wurealm Design Co. Ltd. All rights reserved.
