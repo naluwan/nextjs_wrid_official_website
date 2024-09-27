@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import fbIcon from '@/public/fb-black.png';
 import igIcon from '@/public/ig-black.png';
-import lineIcon from '@/public/line-black.png';
+// import lineIcon from '@/public/line-black.png';
 import footerIcon from '@/public/logo.png';
 import { cn } from '@/lib/utils';
 
@@ -17,11 +17,11 @@ const Footer = () => {
       src: 'https://www.instagram.com/wurealm_design/',
       icon: igIcon,
     },
-    {
-      title: 'line',
-      src: 'https://line.me/R/ti/p/@038hsoeq',
-      icon: lineIcon,
-    },
+    // {
+    //   title: 'line',
+    //   src: 'https://line.me/R/ti/p/@038hsoeq',
+    //   icon: lineIcon,
+    // },
   ];
   return (
     <footer className='3xl:px-0 mx-auto mt-8 h-auto max-w-[1440px] px-6 py-4 text-[#333] lg:px-20'>
@@ -32,7 +32,7 @@ const Footer = () => {
             alt='footer logo'
             width={180}
             height={60}
-            className='h-[92px] w-[200px]'
+            className='h-[42px] w-[100px]'
             priority
           />
         </div>

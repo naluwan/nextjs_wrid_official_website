@@ -53,8 +53,9 @@ const HomeCollection = () => {
         </h2> */}
         {/* 這裡可以使用輪播圖或其他方式展示案例 */}
         <div
-          className='mb-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
+          className='mb-4 hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-3'
           data-aos='fade-up'
+          data-aos-once
           data-aos-delay='600'
         >
           {collections?.slice(0, 3).map((item) => (
@@ -68,8 +69,9 @@ const HomeCollection = () => {
         </div>
 
         <div
-          className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
+          className='hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-3'
           data-aos='fade-up'
+          data-aos-once
           data-aos-delay='1000'
         >
           {collections?.slice(3, 7).map((item) => (
@@ -79,6 +81,18 @@ const HomeCollection = () => {
               key={item.id}
               onClick={() => clickImage(item.images)}
             />
+          ))}
+        </div>
+
+        <div className='mb-4 grid grid-cols-1 gap-4 md:hidden'>
+          {collections?.slice(0, 7).map((item) => (
+            <div data-aos='fade-up' key={item.id}>
+              <CollectionImage
+                img={item.images[0].src}
+                name={item.label}
+                onClick={() => clickImage(item.images)}
+              />
+            </div>
           ))}
         </div>
 

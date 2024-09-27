@@ -5,7 +5,7 @@ import * as z from 'zod';
 import axios from 'axios';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import {
   Form,
@@ -19,8 +19,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 import toast from 'react-hot-toast';
-import { Mail, PhoneCall, Map } from 'lucide-react';
-import LineBtn from '@/public/lineBtn.png';
+import { Mail, PhoneCall, Map, Printer } from 'lucide-react';
+// import LineBtn from '@/public/lineBtn.png';
 import Link from 'next/link';
 import fbBtn from '@/public/fbBtn.png';
 import igBtn from '@/public/igBtn.png';
@@ -32,13 +32,18 @@ const contactData = [
   {
     title: '聯絡電話',
     icon: <PhoneCall className='h-8 w-8' />,
-    content: '0900-427-410',
+    content: '02-29683319',
   },
+  // {
+  //   title: 'Line',
+  //   icon: LineBtn,
+  //   content: '點擊圖標，加Line諮詢',
+  //   src: 'https://line.me/ti/p/QRKALR7F0n',
+  // },
   {
-    title: 'Line',
-    icon: LineBtn,
-    content: '點擊圖標，加Line諮詢',
-    src: 'https://line.me/ti/p/QRKALR7F0n',
+    title: 'Fax',
+    icon: <Printer className='h-8 w-8' />,
+    content: '02-29683320',
   },
   {
     title: 'E-mail',
@@ -126,30 +131,30 @@ const ContactPage: React.FC = () => {
           {/* 聯絡資訊 */}
           <div className='grid grid-cols-1 md:grid-cols-2'>
             {contactData.map((item) => {
-              if (item.title === 'Line') {
-                return (
-                  <div
-                    className='flex items-center pb-4 max-md:flex-col max-md:items-start'
-                    key={item.title}
-                  >
-                    <Link href={item.src as string} target='_blank' rel='noreferrer'>
-                      <Image
-                        src={item.icon as StaticImageData}
-                        alt='LineBtn'
-                        width={8}
-                        height={8}
-                        className='h-8 w-8'
-                      />
-                    </Link>
-                    <div className='md:text-md px-4 text-base max-md:p-0 max-md:py-4'>
-                      <a href={item.src} target='_blank' rel='noreferrer'>
-                        <h1 className='font-semibold'>{item.title}</h1>
-                      </a>
-                      <h1>{item.content}</h1>
-                    </div>
-                  </div>
-                );
-              }
+              // if (item.title === 'Line') {
+              //   return (
+              //     <div
+              //       className='flex items-center pb-4 max-md:flex-col max-md:items-start'
+              //       key={item.title}
+              //     >
+              //       <Link href={item.src as string} target='_blank' rel='noreferrer'>
+              //         <Image
+              //           src={item.icon as StaticImageData}
+              //           alt='LineBtn'
+              //           width={8}
+              //           height={8}
+              //           className='h-8 w-8'
+              //         />
+              //       </Link>
+              //       <div className='md:text-md px-4 text-base max-md:p-0 max-md:py-4'>
+              //         <a href={item.src} target='_blank' rel='noreferrer'>
+              //           <h1 className='font-semibold'>{item.title}</h1>
+              //         </a>
+              //         <h1>{item.content}</h1>
+              //       </div>
+              //     </div>
+              //   );
+              // }
               return (
                 <div
                   className='flex items-center pb-4 max-md:flex-col max-md:items-start'

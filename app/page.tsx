@@ -25,13 +25,17 @@ const Home = () => {
         {/* 引導語 */}
         <section className='text-center tracking-widest'>
           <div className='flex flex-col items-center justify-center text-sm  md:flex-row md:text-lg'>
-            <h2 className='mb-4 font-bold' data-aos='fade-up'>
+            <h2 className='mb-4 font-bold' data-aos='fade-up' data-aos-once>
               家乃身心歸依沉澱之處
             </h2>
-            <h2 className='mb-4 hidden font-bold md:block' data-aos='fade-up'>
+            <h2
+              className='mb-4 hidden font-bold md:block'
+              data-aos='fade-up'
+              data-aos-once
+            >
               ，
             </h2>
-            <h2 className='mb-4 font-bold' data-aos='fade-up'>
+            <h2 className='mb-4 font-bold' data-aos='fade-up' data-aos-once>
               亦為喧囂中的一方淨土
             </h2>
           </div>
@@ -39,6 +43,7 @@ const Home = () => {
           <p
             className='text-[12px] tracking-[.25rem] md:mb-[6px] md:text-sm'
             data-aos='fade-up'
+            data-aos-once
             data-aos-delay='200'
           >
             故以居者為核心發想
@@ -47,6 +52,7 @@ const Home = () => {
           <p
             className='text-[12px] tracking-[.25rem] md:mb-[6px] md:text-sm'
             data-aos='fade-up'
+            data-aos-once
             data-aos-delay='200'
           >
             實亦輔虛，虛亦成境
@@ -55,6 +61,7 @@ const Home = () => {
           <p
             className='text-[12px] tracking-[.25rem] md:mb-[6px] md:text-sm'
             data-aos='fade-up'
+            data-aos-once
             data-aos-delay='400'
           >
             設計核心不侷限於實體架構
@@ -63,6 +70,7 @@ const Home = () => {
           <p
             className='text-[12px] tracking-[.25rem] md:mb-[6px] md:text-sm'
             data-aos='fade-up'
+            data-aos-once
             data-aos-delay='400'
           >
             而是空間、人、自然的連結性
@@ -71,6 +79,7 @@ const Home = () => {
           <p
             className='text-[12px] tracking-[.25rem] md:mb-[6px] md:text-sm'
             data-aos='fade-up'
+            data-aos-once
             data-aos-delay='400'
           >
             回到大地本然的屬性
@@ -79,6 +88,7 @@ const Home = () => {
           <p
             className='text-[12px] tracking-[.25rem] md:mb-[6px] md:text-sm'
             data-aos='fade-up'
+            data-aos-once
             data-aos-delay='400'
           >
             重新構建出生活的本體
