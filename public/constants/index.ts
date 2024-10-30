@@ -137,18 +137,18 @@ export const collectionsData = [
     ],
     order: 4,
   },
-  {
-    id: 'collection9',
-    label: '新生南',
-    category: 'home',
-    images: [
-      { id: 47, name: '新生南1', src: collection9.image1.src },
-      { id: 48, name: '新生南2', src: collection9.image2.src },
-      { id: 49, name: '新生南3', src: collection9.image3.src },
-      { id: 50, name: '新生南4', src: collection9.image4.src },
-      { id: 51, name: '新生南5', src: collection9.image5.src },
-    ],
-  },
+  // {
+  //   id: 'collection9',
+  //   label: '新生南',
+  //   category: 'home',
+  //   images: [
+  //     { id: 47, name: '新生南1', src: collection9.image1.src },
+  //     { id: 48, name: '新生南2', src: collection9.image2.src },
+  //     { id: 49, name: '新生南3', src: collection9.image3.src },
+  //     { id: 50, name: '新生南4', src: collection9.image4.src },
+  //     { id: 51, name: '新生南5', src: collection9.image5.src },
+  //   ],
+  // },
   {
     id: 'collection10',
     label: '龜山',
