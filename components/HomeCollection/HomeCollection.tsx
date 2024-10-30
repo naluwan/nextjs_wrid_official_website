@@ -32,7 +32,7 @@ const HomeCollection = () => {
             collection.label === '敦化' ||
             collection.label === '大直' ||
             collection.label === '信義' ||
-            collection.label === '南港' ||
+            collection.label === '新竹' ||
             collection.label === '桃園' ||
             collection.label === '天母',
         )
